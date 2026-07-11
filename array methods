@@ -1,0 +1,107 @@
+// Original Array
+let students = ["Ali", "Sara", "Ahmed"];
+
+console.log("Original:", students);
+
+// 1. push() - Add to end
+students.push("Fatima");
+console.log("push():", students);
+
+// 2. pop() - Remove last
+students.pop();
+console.log("pop():", students);
+
+// 3. unshift() - Add to beginning
+students.unshift("Hamza");
+console.log("unshift():", students);
+
+// 4. shift() - Remove first
+students.shift();
+console.log("shift():", students);
+
+// 5. includes() - Check if value exists
+console.log("includes('Sara'):", students.includes("Sara"));
+
+// 6. indexOf() - Find index
+console.log("indexOf('Ahmed'):", students.indexOf("Ahmed"));
+
+// 7. concat() - Merge arrays
+let newStudents = ["Usman", "Ayesha"];
+let allStudents = students.concat(newStudents);
+console.log("concat():", allStudents);
+
+// 8. slice() - Copy part of array
+console.log("slice(1,3):", allStudents.slice(1, 3));
+
+// 9. splice() - Remove/Add elements
+allStudents.splice(2, 1, "Bilal");
+console.log("splice():", allStudents);
+
+// 10. reverse()
+console.log("reverse():", [...allStudents].reverse());
+
+// 11. sort()
+console.log("sort():", [...allStudents].sort());
+
+// 12. join()
+console.log("join():", allStudents.join(" - "));
+
+// 13. map()
+let upper = allStudents.map(name => name.toUpperCase());
+console.log("map():", upper);
+
+// 14. filter()
+let longNames = allStudents.filter(name => name.length > 4);
+console.log("filter():", longNames);
+
+// 15. forEach()
+console.log("forEach():");
+allStudents.forEach((name, index) => {
+    console.log(index, name);
+});
+
+// 16. find()
+let found = allStudents.find(name => name.startsWith("A"));
+console.log("find():", found);
+
+// 17. some()
+console.log("some():", allStudents.some(name => name === "Ali"));
+
+// 18. every()
+console.log("every():", allStudents.every(name => typeof name === "string"));
+
+// 19. reduce()
+let numbers = [10, 20, 30, 40];
+let total = numbers.reduce((sum, num) => sum + num, 0);
+console.log("reduce():", total);
+
+// 20. flat()
+let nested = [1, 2, [3, 4], [5, [6]]];
+console.log("flat():", nested.flat(2));
+
+// 21. fill()
+let arr = [1, 2, 3, 4];
+arr.fill(0, 1, 3);
+console.log("fill():", arr);
+
+// 22. Array.from()
+let word = "HELLO";
+console.log("Array.from():", Array.from(word));
+
+// 23. keys()
+console.log("keys():");
+for (let key of students.keys()) {
+    console.log(key);
+}
+
+// 24. values()
+console.log("values():");
+for (let value of students.values()) {
+    console.log(value);
+}
+
+// 25. entries()
+console.log("entries():");
+for (let [index, value] of students.entries()) {
+    console.log(index, value);
+}
