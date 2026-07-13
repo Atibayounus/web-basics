@@ -1,0 +1,25 @@
+// Select elements
+const heading = document.getElementById("heading");
+const paragraph = document.getElementById("paragraph");
+const button = document.getElementById("btn");
+const list = document.getElementById("list");
+
+// Add click event
+button.addEventListener("click", function () {
+
+    // Change heading text
+    heading.textContent = "DOM Manipulation";
+
+    // Change paragraph text
+    paragraph.textContent = "The content has been changed using JavaScript.";
+
+    // Create a new list item
+    const newItem = document.createElement("li");
+    newItem.textContent = "Item 3";
+
+    // Add the new item to the list
+    list.appendChild(newItem);
+
+    // Change button text
+    button.textContent = "Clicked";
+});
