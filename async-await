@@ -1,0 +1,18 @@
+id="123";
+console.log("START");
+function getMessage(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+   resolve("HELLOO (2S)");
+
+        },2000);
+});
+}
+// async / await
+async function run() {
+    let message= await getMessage();
+    console.log(message);
+}
+
+run();
+console.log("END");
