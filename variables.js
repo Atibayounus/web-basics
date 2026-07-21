@@ -19,7 +19,9 @@ let isHero = true;            // Boolean
 let salary = 50000.75;        // Decimal Number
 let city = null;              // Null
 let state;                    // Undefined
+let cat ;
 
+console.log(typeof cat );
 console.log(firstName);
 console.log(heroAge);
 console.log(isHero);
@@ -30,4 +32,21 @@ console.log(state);
 // Using variables together
 let fullMessage = firstName + " is " + heroAge + " years old.";
 console.log(fullMessage);
+
+let Name = "Atiba";
+console.log(typeof Name);
+
+let numb = 10;
+console.log(typeof numb );
+let bool = false;
+console.log(typeof bool );
+
+let digits =10000000n;
+console.log(typeof digits );
+
+let sym = Symbol("id");
+console.log(typeof sym );
+
+
+
 
